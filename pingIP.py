@@ -152,44 +152,38 @@ try:
             avgtimetaken.append(timetaken)
             avgserverresponse.append(response.status_code)
 
+            if streamlined == False and quickmode == False:
+                print(f"Pinged {hostip} from {userip} with response code {response.status_code}. Time taken = {'{0:.2f}'.format(timetaken)}ms")
+        
+            if streamlined == True or quickmode == True:
+                print(f"Response {response.status_code}: {'{0:.2f}'.format(timetaken)}ms")
+
         except Timeout:
             print("Host timed out")
-            avgtimetaken.append(0)
-            avgserverresponse.append("")
             failCon += 1
             continue
 
         except Exception as error:
             #print (error)
             print("ERROR CONNECTION FAILED")
-            avgtimetaken.append(0)
-            avgserverresponse.append("")
             failCon += 1
-
-    
-        
-        if streamlined == False and quickmode == False:
-            print(f"Pinged {hostip} from {userip} with response code {response.status_code}. Time taken = {'{0:.2f}'.format(timetaken)}ms")
-        
-        if streamlined == True or quickmode == True:
-            print(f"Response {response.status_code}: {'{0:.2f}'.format(timetaken)}ms")
+            
 
 
+    print("\n")
 
 
 
 
     # Final Details
-    average = round((sum(avgtimetaken) / len(avgtimetaken)),3)#
-    minimum = min(avgtimetaken)
-    maximum = max(avgtimetaken)
-    avgservercode = max(set(avgserverresponse), key=avgserverresponse.count)
-    print("\n")
-
     print(f"Sent {pingamount-failCon}/{pingamount} pings {'{0}'.format(((pingamount-failCon)/pingamount)*100)}%")
     if len(avgtimetaken) != 0:
+        average = round((sum(avgtimetaken) / len(avgtimetaken)),3)#
+        minimum = min(avgtimetaken)
+        maximum = max(avgtimetaken)
         print(f"Minimum = {'{0:.2f}'.format(minimum)}ms, Average = {'{0:.2f}'.format(average)}ms, Maximum = {'{0:.2f}'.format(maximum)}ms")
-    if len(avgserverresponse) != "" and streamlined == False:
+    if len(avgserverresponse) != 0 and streamlined == False:
+        avgservercode = max(set(avgserverresponse), key=avgserverresponse.count)
         print(f"Average server response {avgservercode} - {http_status_codes[avgservercode]}")
 
 
