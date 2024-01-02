@@ -59,7 +59,7 @@ args = parser.parse_args()
 hostname = args.hostname
 pingamount = int(args.pingamount)
 streamlined = args.streamlined
-timeout = int(args.timeout)
+timeout = float(args.timeout)
 quickmode = args.quickmode
 verification = args.verify
 
