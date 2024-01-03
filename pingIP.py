@@ -166,6 +166,8 @@ try:
         except Exception as error:
             #print (error)
             print("ERROR CONNECTION FAILED")
+            if streamlined == False or quickmode == False:
+                userip = get('https://api.ipify.org').text
             failCon += 1
             
 
