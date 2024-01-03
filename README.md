@@ -1,5 +1,9 @@
 # pingIP
-Command Line python code to ping webservers with high functionality and speed compared to inbuilt ping
+Command Line python code to ping webservers with greater statistics, functionality and speed compared to inbuilt ping
+pingIP varies from the inbuilt ping function because it requests the entire webserver, meaning the server response as well as the content is recorded
+
+![pingIP](https://github.com/OGD311/pingIP/assets/114223604/0fcf6843-eda5-4b2d-91ca-928abbf2920e)
+
 
 ## Installation
 First things first clone the github repository:
@@ -149,6 +153,10 @@ Average Speed of these different settings <br>
 >[!NOTE]
 >Obviously these numbers vary by machine, internet speed, etc but they show the speed of quickmode and disabling verify.
 
+
+## Future Features
+These are features I would like to add but are currently WIP / I lack the knowledge on how to implement: <br>
+* Ability to change the size of data sent, similar to how the current windows 'ping' works
 
 
 
