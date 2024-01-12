@@ -1,6 +1,6 @@
 # pingIP
 Command Line python code to ping webservers with greater statistics, functionality and speed compared to inbuilt ping
-pingIP varies from the inbuilt ping function because it requests the entire webserver, meaning the server response as well as the content is recorded
+pingIP varies from the inbuilt ping function because it requests the entire webserver, meaning the server response as well as the content is recorded leading to more accurate connection statistics
 
 ![pingIP](https://github.com/OGD311/pingIP/assets/114223604/0fcf6843-eda5-4b2d-91ca-928abbf2920e)
 
@@ -28,21 +28,21 @@ For example: <br>
 <code>python pingIP.py google.com</code> <br>
 Returns: <br>
 ```
-Establishing host IP...<br>
-Establishing user IP...<br>
-HOST FOUND<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 29.10ms<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 30.40ms<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 33.10ms<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 29.50ms<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 29.20ms<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 28.80ms<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 28.10ms<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 28.40ms<br>
+Establishing host IP...
+Establishing user IP...
+HOST FOUND
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 29.10ms
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 30.40ms
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 33.10ms
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 29.50ms
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 29.20ms
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 28.80ms
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 28.10ms
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 28.40ms
 
-Sent 8/8 pings 100.0%<br>
-Minimum = 28.10ms, Average = 29.57ms, Maximum = 33.10ms<br>
-Average server response 200 - OK: The request was successful.<br>
+Sent 8/8 pings 100.0%
+Minimum = 28.10ms, Average = 29.57ms, Maximum = 33.10ms
+Average server response 200 - OK: The request was successful.
 ```
 
 ### Advanced Use
@@ -60,18 +60,18 @@ Number of times to ping the server; default is 8 times <br>
 <code>python pingIP.py google.com -n 4</code> <br>
 Output: <br>
 ```
-Establishing host IP...<br>
-Establishing user IP...<br>
-HOST FOUND<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 51.70ms<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 39.40ms<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 32.80ms<br>
-Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 35.10ms<br>
+Establishing host IP...
+Establishing user IP...
+HOST FOUND
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 51.70ms
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 39.40ms
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 32.80ms
+Pinged 142.250.178.14 from 'YOUR IP' with response code 200. Time taken = 35.10ms
 
-Sent 4/4 pings 100.0%<br>
-Minimum = 32.80ms, Average = 39.75ms, Maximum = 51.70ms<br>
+Sent 4/4 pings 100.0%
+Minimum = 32.80ms, Average = 39.75ms, Maximum = 51.70ms
 
-Average server response 200 - OK: The request was successful.<br>
+Average server response 200 - OK: The request was successful.
 ```
 
 ### -t TIMEOUT
@@ -82,15 +82,15 @@ Duration before ping timesout measured in seconds; default is 5 seconds <br>
  
 Output: <br>
 ```
-Establishing host IP...<br>
-Establishing user IP...<br>
-HOST FOUND<br>
-Host timed out<br>
-Host timed out<br>
-Host timed out<br>
-Host timed out<br>
+Establishing host IP...
+Establishing user IP...
+HOST FOUND
+Host timed out
+Host timed out
+Host timed out
+Host timed out
 
-Sent 0/4 pings 0.0%<br>
+Sent 0/4 pings 0.0%
 ```
 > [!NOTE]
 > No statistics are output here because there are none to record; if 1 or more are successful then there will be statistics outputted
@@ -101,13 +101,13 @@ Aims to speed up the processing by enabling streamlined responses, disables SSL 
 <code>python pingIP.py google.com -n 4 -q</code><br>
 Outputs: <br>
 ```
-Response 200: 36.00ms<br>
-Response 200: 26.40ms<br>
-Response 200: 27.10ms<br>
-Response 200: 25.30ms<br>
+Response 200: 36.00ms
+Response 200: 26.40ms
+Response 200: 27.10ms
+Response 200: 25.30ms
 
-Sent 4/4 pings 100.0%<br>
-Minimum = 25.30ms, Average = 28.70ms, Maximum = 36.00ms<br>
+Sent 4/4 pings 100.0%
+Minimum = 25.30ms, Average = 28.70ms, Maximum = 36.00ms
 ```
 >[!CAUTION]
 > Activating quickmode may lead to unknown crashes / errors and can make your computer vulnerable to Man in the Middle Attacks amongst other HTTP vulnerabilities
@@ -117,17 +117,17 @@ Verifies SSL Certificate before pinging websites; highly recommend using this if
 <code>python PingIP.py google.com -n 4 -v</code><br>
 Outputs: <br>
 ```
-Establishing host IP...<br>
-Establishing user IP...<br>
-HOST FOUND<br>
-Pinged 142.250.179.238 from 'YOUR IP' with response code 200. Time taken = 62.50ms<br>
-Pinged 142.250.179.238 from 'YOUR IP' with response code 200. Time taken = 60.90ms<br>
-Pinged 142.250.179.238 from 'YOUR IP' with response code 200. Time taken = 62.40ms<br>
-Pinged 142.250.179.238 from 'YOUR IP' with response code 200. Time taken = 60.30ms<br>
+Establishing host IP...
+Establishing user IP...
+HOST FOUND
+Pinged 142.250.179.238 from 'YOUR IP' with response code 200. Time taken = 62.50ms
+Pinged 142.250.179.238 from 'YOUR IP' with response code 200. Time taken = 60.90ms
+Pinged 142.250.179.238 from 'YOUR IP' with response code 200. Time taken = 62.40ms
+Pinged 142.250.179.238 from 'YOUR IP' with response code 200. Time taken = 60.30ms
 
-Sent 4/4 pings 100.0%<br>
-Minimum = 60.30ms, Average = 61.52ms, Maximum = 62.50ms<br>
-Average server response 200 - OK: The request was successful.<br>
+Sent 4/4 pings 100.0%
+Minimum = 60.30ms, Average = 61.52ms, Maximum = 62.50ms
+Average server response 200 - OK: The request was successful.
 ```
 >[!CAUTION]
 > Deactivating SSL Certificate Verification can make your computer vulnerable to Man in the Middle Attacks amongst other HTTP vulnerabilities
@@ -137,16 +137,16 @@ Streamlines outputs, only showing number of successful pings and speed statistic
 <code>python PingIP.py google.com -n 4 --sl</code><br>
 Outputs: <br>
 ```
-Establishing host IP...<br>
-Establishing user IP...<br>
-HOST FOUND<br>
-Response 200: 26.00ms<br>
-Response 200: 25.30ms<br>
-Response 200: 28.00ms<br>
-Response 200: 28.60ms<br>
+Establishing host IP...
+Establishing user IP...
+HOST FOUND
+Response 200: 26.00ms
+Response 200: 25.30ms
+Response 200: 28.00ms
+Response 200: 28.60ms
 
-Sent 4/4 pings 100.0%<br>
-Minimum = 25.30ms, Average = 26.98ms, Maximum = 28.60ms<br>
+Sent 4/4 pings 100.0%
+Minimum = 25.30ms, Average = 26.98ms, Maximum = 28.60ms
 ```
 
 ## Speed Comparisons
